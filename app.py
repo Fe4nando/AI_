@@ -18,45 +18,38 @@ generation_config = {
 
 
 # === Streamlit Config ===
-st.set_page_config(page_title="Prompt Breaker - Gemini Flash", layout="centered")
+st.set_page_config(page_title="QAUNTORA's AI", layout="centered")
 
 st.markdown("""
     <style>
-    /* Remove red border/focus glow */
-    input[type="text"] {
+    input[type="text"], textarea {
         background-color: #0A0F1D;
         color: white;
-        border: 1px solid #444 !important;
-        border-radius: 10px;
+        border: 2px solid #222 !important;
+        border-radius: 6px;
         padding: 10px;
         outline: none !important;
         box-shadow: none !important;
+        transition: none !important;
+        -webkit-transform: translateZ(0); /* fixes GPU flicker */
     }
 
-    input[type="text"]:focus {
-        border: 1px solid #444 !important;
+    input[type="text"]:focus, textarea:focus {
+        border: 2px solid #4A90E2 !important;
         box-shadow: none !important;
-    }
-
-    textarea {
-        background-color: #0A0F1D;
-        color: white;
-        border: 1px solid #444 !important;
-        border-radius: 10px;
-        padding: 10px;
         outline: none !important;
-        box-shadow: none !important;
     }
 
-    textarea:focus {
-        border: 1px solid #444 !important;
-        box-shadow: none !important;
+    /* Disable focus ring globally */
+    *:focus {
+        outline: none !important;
     }
     </style>
 """, unsafe_allow_html=True)
 
 
-st.markdown("<h1 style='text-align: center;'>Type the character to behave as a historical character)</h1>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center;'>Type the character to behave as a historical character</h1>", unsafe_allow_html=True)
 
 # === Session Setup ===
 if "chat_session" not in st.session_state:
