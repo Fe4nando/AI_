@@ -22,30 +22,41 @@ st.set_page_config(page_title="Prompt Breaker - Gemini Flash", layout="centered"
 
 st.markdown("""
     <style>
+    /* Remove red border/focus glow */
     input[type="text"] {
         background-color: #0A0F1D;
         color: white;
-        border: 1px solid #444;
+        border: 1px solid #444 !important;
         border-radius: 10px;
         padding: 10px;
-        outline: none;
-        box-shadow: none;
-        transition: border 0.2s ease-in-out;
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     input[type="text"]:focus {
-        border: 1px solid #666;
-        box-shadow: 0 0 4px #4A90E2;
+        border: 1px solid #444 !important;
+        box-shadow: none !important;
     }
 
-    .stTextInput > div > div > input:focus-visible {
-        outline: none;
+    textarea {
+        background-color: #0A0F1D;
+        color: white;
+        border: 1px solid #444 !important;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    textarea:focus {
+        border: 1px solid #444 !important;
+        box-shadow: none !important;
     }
     </style>
 """, unsafe_allow_html=True)
 
 
-st.markdown("<h1 style='text-align: center;'>💬 Prompt Breaker (Flash Edition)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Type the character to behave as a historical character)</h1>", unsafe_allow_html=True)
 
 # === Session Setup ===
 if "chat_session" not in st.session_state:
