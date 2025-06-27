@@ -22,27 +22,28 @@ st.set_page_config(page_title="Prompt Breaker - Gemini Flash", layout="centered"
 
 st.markdown("""
     <style>
-    body {
-        background-color: #000000;
-        color: #ffffff;
-    }
-    .stTextInput > div > div > input, .stTextArea textarea {
+    input[type="text"] {
         background-color: #0A0F1D;
         color: white;
         border: 1px solid #444;
-    }
-    .chat-box {
-        background-color: #0A0F1D;
-        color: white;
-        padding: 1em;
         border-radius: 10px;
-        border: 1px solid #444;
-        min-height: 200px;
-        overflow-y: auto;
-        margin-bottom: 20px;
+        padding: 10px;
+        outline: none;
+        box-shadow: none;
+        transition: border 0.2s ease-in-out;
+    }
+
+    input[type="text"]:focus {
+        border: 1px solid #666;
+        box-shadow: 0 0 4px #4A90E2;
+    }
+
+    .stTextInput > div > div > input:focus-visible {
+        outline: none;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.markdown("<h1 style='text-align: center;'>💬 Prompt Breaker (Flash Edition)</h1>", unsafe_allow_html=True)
 
