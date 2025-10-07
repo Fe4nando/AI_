@@ -118,7 +118,7 @@ with col_right:
 
 # === Grade Selection ===
 grade = st.selectbox("Select your grade level:", ["Grade 6–8", "Grade 9–12"])
-min_words, max_words = (0, 200) if grade == "Grade 6–8" else (0, 250)
+min_words, max_words = (0, 125) if grade == "Grade 6–8" else (0, 150)
 
 # === Student Prompt ===
 student_prompt = st.text_area(f"Define your AI character ({min_words}–{max_words} words):", height=250)
@@ -186,5 +186,6 @@ st.markdown("""
         © 2025 Quantora. All rights reserved. <br> Developed by Fernando Gabriel Morera.
     </div>
 """, unsafe_allow_html=True)
+
 
 
