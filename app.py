@@ -110,7 +110,7 @@ with col_left:
     - Ability to remain in character  
     - Creativity and variety of responses  
 
-    **Character personas:** Zeus, Nikola Tesla, Mahatma Gandhi, and William Shakespeare
+    **Character personas:** Zeus, Nikola Tesla, Mahatma Gandhi, and William Shakespeare (Subject to Change)
     """)
 
 with col_right:
@@ -186,4 +186,5 @@ st.markdown("""
         © 2025 Quantora. All rights reserved. <br> Developed by Fernando Gabriel Morera.
     </div>
 """, unsafe_allow_html=True)
+
 
